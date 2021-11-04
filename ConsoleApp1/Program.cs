@@ -57,9 +57,9 @@ namespace ConsoleApp1
             
             LinkkedList obj = new LinkkedList();
           
-            obj.AddInfront(56);
-            obj.AddInfront(30);
             obj.AddInfront(70);
+            obj.AddInfront(30);
+            obj.AddInfront(56);
 
             obj.printList();
 
