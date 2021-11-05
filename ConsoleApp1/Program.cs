@@ -7,6 +7,7 @@ namespace ConsoleApp1
     {
         public int data;
         public LinkedListNode next;
+       
 
         public LinkedListNode(int x)
         {
@@ -18,7 +19,6 @@ namespace ConsoleApp1
     class LinkkedList{
       
         LinkedListNode head =null;
-       
         public void AddInfront(int data)
         {
             LinkedListNode node = new LinkedListNode(data);
@@ -30,6 +30,7 @@ namespace ConsoleApp1
         public void printList()
         {
             LinkedListNode runner = head;
+
          
 
             while (runner != null)
@@ -39,8 +40,41 @@ namespace ConsoleApp1
             }
 
         }
+     
+
+        public void InsertBetween(int prev, int data)
+        {
+
+            LinkedListNode node = new LinkedListNode(data);
+            if (prev == null)
+            {
+                Console.WriteLine("Previous node cannot be null");
+                //head = node;
+            }
+            else
+
+            {
+                LinkedListNode SearchNode = head;
+
+                while (!SearchNode.data.Equals(prev))
+                {
+                    SearchNode = SearchNode.next;
+                }
+                LinkedListNode tempNode = SearchNode.next;
+                SearchNode.next = node;
+                SearchNode.next.next = tempNode;
+                
+
+            }
+
+        }
+        
+
+   
 
     }
+
+   
 
 
 
@@ -58,8 +92,15 @@ namespace ConsoleApp1
             LinkkedList obj = new LinkkedList();
           
             obj.AddInfront(56);
-            obj.AddInfront(30);
+            obj.AddInfront(60);
+            obj.AddInfront(65);
             obj.AddInfront(70);
+
+            obj.AddInfront(30);
+            obj.AddInfront(75);
+      
+
+            obj.InsertBetween(70, 31);
 
             obj.printList();
 
