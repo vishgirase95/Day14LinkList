@@ -52,7 +52,7 @@ namespace ConsoleApp1
                 //head = node;
             }
             else
-
+             
             {
                 LinkedListNode SearchNode = head;
 
@@ -73,9 +73,21 @@ namespace ConsoleApp1
         {
             head = head.next;
         }
-        
+        public void DeleteLastNumber()
+        {
+            LinkedListNode temp = head;
+           
+            while (temp.next != null)
+            {
+                Console.WriteLine(temp.data);
+                temp = temp.next;
+            }
+          
 
-   
+
+        }
+
+
 
     }
 
@@ -97,14 +109,15 @@ namespace ConsoleApp1
             LinkkedList obj = new LinkkedList();
           
             obj.AddInfront(56);
+            obj.AddInfront(30);
+
             obj.AddInfront(70);
-          
-      
+            
+            obj.DeleteLastNumber();
 
-            obj.InsertBetween(70, 30);
-            obj.DeleteFirstElement();
-
-            obj.printList();
+           
         }
+
+
     }
 }
