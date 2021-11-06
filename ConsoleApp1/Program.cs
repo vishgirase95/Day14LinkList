@@ -68,6 +68,11 @@ namespace ConsoleApp1
             }
 
         }
+
+        public void DeleteFirstElement()
+        {
+            head = head.next;
+        }
         
 
    
@@ -97,9 +102,9 @@ namespace ConsoleApp1
       
 
             obj.InsertBetween(70, 30);
+            obj.DeleteFirstElement();
 
             obj.printList();
-
         }
     }
 }
