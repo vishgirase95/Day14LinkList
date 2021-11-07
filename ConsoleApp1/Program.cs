@@ -75,14 +75,19 @@ namespace ConsoleApp1
         }
         public void DeleteLastNumber()
         {
+
             LinkedListNode temp = head;
-           
+            LinkedListNode prev = null;
+
             while (temp.next != null)
             {
-                Console.WriteLine(temp.data);
+
+                prev = temp;
                 temp = temp.next;
             }
-          
+            prev.next = null;
+
+
 
 
         }
@@ -110,10 +115,19 @@ namespace ConsoleApp1
           
             obj.AddInfront(56);
             obj.AddInfront(30);
+        
+
 
             obj.AddInfront(70);
             
+            
+            
+            
             obj.DeleteLastNumber();
+            obj.printList();
+
+
+
 
            
         }
