@@ -93,6 +93,40 @@ namespace ConsoleApp1
         }
 
 
+        public int count = 0;
+        public void searchElement(int search)
+        {
+            LinkedListNode temp = head;
+
+            while (temp!=null)
+            {
+                if (temp.data == search)
+                {
+
+                    Console.WriteLine("Element found");
+                    count++;
+                    break;
+
+                }
+              
+            
+                   temp= temp.next;
+
+
+            }
+
+
+
+
+            if (count ==0)
+            {
+                Console.WriteLine("Elemet Not found");
+            }
+         
+        }
+       
+
+
 
     }
 
@@ -115,21 +149,24 @@ namespace ConsoleApp1
           
             obj.AddInfront(56);
             obj.AddInfront(30);
+
         
 
 
             obj.AddInfront(70);
+
+
+
+
             
-            
-            
-            
-            obj.DeleteLastNumber();
+            obj.searchElement(33);
+
             obj.printList();
 
 
 
 
-           
+
         }
 
 
