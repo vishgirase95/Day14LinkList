@@ -56,7 +56,7 @@ namespace ConsoleApp1
             {
                 LinkedListNode SearchNode = head;
 
-                while (!SearchNode.data.Equals(prev))
+                while (SearchNode.data.Equals(prev))
                 {
                     SearchNode = SearchNode.next;
                 }
@@ -148,7 +148,7 @@ namespace ConsoleApp1
             LinkkedList obj = new LinkkedList();
           
             obj.AddInfront(56);
-            obj.AddInfront(30);
+            //obj.AddInfront(30);
 
         
 
@@ -158,8 +158,8 @@ namespace ConsoleApp1
 
 
 
-            
-            obj.searchElement(33);
+
+            obj.InsertBetween(70, 30);
 
             obj.printList();
 
